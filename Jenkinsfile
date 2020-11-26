@@ -7,13 +7,13 @@ node{
     
     stage('Run Docker Compose File')
     {
-        sh 'docker-compose build'
-        sh 'docker-compose up -d'
+        sh 'sudo docker-compose build'
+        sh 'sudo docker-compose up -d'
     }
     stage('PUSH image to Docker Hub')
     {
-        sh 'docker login -u "doctorai" -p "Doctorai@123" docker.io'
+        sh 'sudo docker login -u "doctorai" -p "Doctorai@123" docker.io'
         
-        sh 'docker push doctorai/phpmysql_app'
+        sh 'sudo docker push doctorai/phpmysql_app'
     }
 }
