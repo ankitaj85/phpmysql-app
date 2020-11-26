@@ -12,10 +12,8 @@ node{
     }
     stage('PUSH image to Docker Hub')
     {
-        withCredentials([string(credentialsId: 'DockerHubPassword', variable: 'DHPWD')]) 
-        {
-            sh "docker login -u vardhanns -p ${DHPWD}"
-        }
-        sh 'docker push vardhanns/phpmysql_app'
+        sh 'docker login -u "doctorai" -p "Doctorai@123" docker.io'
+        
+        sh 'docker push doctorai/phpmysql_app'
     }
 }
