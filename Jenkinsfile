@@ -7,6 +7,7 @@ node{
     
     stage('Run Docker Compose File')
     {
+        sh 'export DOCKER_HOST=127.0.0.1:2375'
         sh 'docker-compose build'
         sh 'docker-compose up -d'
     }
