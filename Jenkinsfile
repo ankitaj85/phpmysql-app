@@ -7,14 +7,11 @@ node{
     
     stage('Run Docker Compose File')
     {
-        sh 'export DOCKER_HOST=127.0.0.1:2375'
         sh 'docker-compose build'
         sh 'docker-compose up -d'
     }
     stage('PUSH image to Docker Hub')
     {
-        sh 'docker login -u "doctorai" -p "Doctorai@123" docker.io'
-        sh 'docker tag edurekajob1_web doctorai/edurekajob1_web'
-        sh 'docker push doctorai/edurekajob1_web'
+        sh 'docker push doctorai/phpmysql_app_web'
     }
 }
