@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-       image: doctorai/phpmysql_app
+       image: doctorai/phpmysql_app:latest
        build:
                context: ./php/online-shopping-system
                dockerfile: Dockerfile
