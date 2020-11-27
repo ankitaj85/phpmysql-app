@@ -14,7 +14,7 @@ node{
     stage('PUSH image to Docker Hub')
     {
         sh 'docker login -u "doctorai" -p "Doctorai@123" docker.io'
-        
+        sh 'docker tag edurekajob1_web doctorai/edurekajob1_web'
         sh 'docker push doctorai/edurekajob1_web'
     }
 }
