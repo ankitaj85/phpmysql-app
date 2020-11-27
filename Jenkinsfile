@@ -12,6 +12,6 @@ node{
     }
     stage('PUSH image to Docker Hub')
     {
-        sh 'docker push doctorai/phpmysql_app_web'
+        sh 'docker push doctorai/phpmysql_app'
     }
 }
