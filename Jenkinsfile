@@ -15,6 +15,6 @@ node{
     {
         sh 'docker login -u "doctorai" -p "Doctorai@123" docker.io'
         
-        sh 'docker push doctorai/phpmysql_app'
+        sh 'docker push doctorai/edurekajob1_web'
     }
 }
