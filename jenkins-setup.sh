@@ -18,7 +18,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo systemctl restart docker
 sudo apt install -y gnupg2 pass
-docker login -u doctorai -p Doctorai@123
+docker login -u username -p password
 
 # Install jenkins
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
